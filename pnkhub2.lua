@@ -3948,8 +3948,8 @@ MIo = {
 	"Fast",
 	"Smooth"
 }
-General_Tab:Toggle("Fast Attack ","9606294253",_G.Setting_table.FastAttack,function(vu)
-	_G.Setting_table.FastAttack = vu
+General_Tab:Toggle("ตีไว ","9606294253",_G.Setting_table.FastAttack,function(vu)
+	_G.Setting_table.ตีไว = vu
 	Update_Setting(getgenv()['MyName'])
 end)
 spawn(function()
@@ -3966,11 +3966,11 @@ end)
 General_Tab:Dropdown("FastAttack","Fast",MIo,function(vu)
 	_G.Setting_table.FastAttack_Mode = vu
 	Update_Setting(getgenv()['MyName'])
-	if _G.Setting_table.FastAttack_Mode == "Fast" then
+	if _G.Setting_table.FastAttack_Mode == "ตีเร็ว" then
 		_G.Fast_Delay = 0.1
 	elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
 		_G.Fast_Delay = 0.3
-	elseif _G.Setting_table.FastAttack_Mode == "Super Fast" then
+	elseif _G.Setting_table.FastAttack_Mode == "ตีเร็วขั้นสูง" then
 		_G.Fast_Delay = 0
 	end
 end)
