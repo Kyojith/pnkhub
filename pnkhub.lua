@@ -87,24 +87,24 @@ getgenv()['JsonDecode'] = function(msg)
     return game:GetService("HttpService"):JSONDecode(msg)
 end
 getgenv()['Check_Setting'] = function(Name)
-    if not _G.Dis and not isfolder('PNK Hub BF Premium') then
-        makefolder('PNK Hub BF Premium')
+    if not _G.Dis and not isfolder('Switch Hub BF Premium') then
+        makefolder('Switch Hub BF Premium')
     end
-    if not _G.Dis and not isfile('PNK Hub BF Premium/'..Name..'.json') then
-        writefile('PNK Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
+    if not _G.Dis and not isfile('Switch Hub BF Premium/'..Name..'.json') then
+        writefile('Switch Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
     end
 end
 getgenv()['Get_Setting'] = function(Name)
-    if not _G.Dis and isfolder('PNK Hub BF Premium') and isfile('PNK Hub BF Premium/'..Name..'.json') then
-        _G.Setting_table = JsonDecode(readfile('PNK Hub BF Premium/'..Name..'.json'))
+    if not _G.Dis and isfolder('Switch Hub BF Premium') and isfile('Switch Hub BF Premium/'..Name..'.json') then
+        _G.Setting_table = JsonDecode(readfile('Switch Hub BF Premium/'..Name..'.json'))
         return _G.Setting_table
 	elseif not _G.Dis then
         Check_Setting(Name)
     end
 end
 getgenv()['Update_Setting'] = function(Name)
-    if not _G.Dis and isfolder('PNK Hub BF Premium') and isfile('PNK Hub BF Premium/'..Name..'.json') then
-        writefile('PNK Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
+    if not _G.Dis and isfolder('Switch Hub BF Premium') and isfile('Switch Hub BF Premium/'..Name..'.json') then
+        writefile('Switch Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
 	elseif not _G.Dis then
         Check_Setting(Name)
     end
@@ -141,7 +141,7 @@ end
 
 function Text(value)
     game.StarterGui:SetCore("SendNotification", {
-        Title = "PNK Notification", 
+        Title = "Switch Notification", 
         Text = tostring(value),
         Icon = "http://www.roblox.com/asset/?id=9606070311",
         Duration = 10
@@ -149,7 +149,7 @@ function Text(value)
 end
 function Com()
     game.StarterGui:SetCore("SendNotification", {
-        Title = "PNK Notification", 
+        Title = "Switch Notification", 
         Text = "✅  Complete",
         Icon = "http://www.roblox.com/asset/?id=9606070311",
         Duration = 5
@@ -2115,6 +2115,7 @@ if IKAI then
 		local abc = false
 		local logo = logo or 0
 		local currentpage = ""
+		local keybind = keybind or Enum.KeyCode.RightControl
 		local yoo = string.gsub(tostring(keybind),"Enum.KeyCode.","")
 		
 		local RippleHUBLIB = Instance.new("ScreenGui")
@@ -2250,6 +2251,25 @@ if IKAI then
 		
 		UICorner.CornerRadius = UDim.new(0, 4)
 		UICorner.Parent = ToggleFrameUi
+		
+		ToggleImgUi.Name = "ToggleImgUi"
+		ToggleImgUi.Parent = ToggleFrameUi
+		ToggleImgUi.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+		ToggleImgUi.BackgroundTransparency = 1
+		ToggleImgUi.Position = UDim2.new(0.0454545468, 0, 0.125000313, 0)
+		ToggleImgUi.Size = UDim2.new(0, 35, 0, 35)
+		ToggleImgUi.Image = "rbxassetid://9606070311"
+		-- http://www.roblox.com/asset/?id=9605991378
+		Uitoggle.Name = "Uitoggle"
+		Uitoggle.Parent = ToggleFrameUi
+		Uitoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Uitoggle.BackgroundTransparency = 1.000
+		Uitoggle.Position = UDim2.new(0.25757575, 0, 0, 0)
+		Uitoggle.Size = UDim2.new(0, 137, 0, 25)
+		Uitoggle.Font = Enum.Font.GothamSemibold
+		Uitoggle.Text = "Ui Toggle :"
+		Uitoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Uitoggle.TextSize = 12.000
 		
 		Yedhee.Name = "Yedhee"
 		Yedhee.Parent = ToggleFrameUi
@@ -3668,19 +3688,25 @@ if IKAI then
 	end
 end
 
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Switch Notification", 
+	Text = "ฟังชั่นที่มีไอคอนนี้สามารถเปิด\nพร้อมฟามเวลได้",
+	Icon = "http://www.roblox.com/asset/?id=9610159123",
+	Duration = 8
+})
 
-local win = library:Window("PNK",[[Hub]],[[Version : Leak  ]],"9606070311",)
+local win = library:Window("Switch",[[Hub]],[[Version : Premium ]],"9606070311",Enum.KeyCode.RightControl)
 local General_Tab = win:Tab("General",[[7040391851]])
 local Quest_Tab = win:Tab("    Quest & Item",[[9606626859]])
-local PvP_Tab = win:Tab("ต่อสู้",[[9606626034]])
+local PvP_Tab = win:Tab("PvP",[[9606626034]])
 local Raid_Tab = win:Tab("Raid",[[9606629300]])
-local Shop_Tab = win:Tab("ร้านค้า",[[9606625251]])
-local Island_Tab = win:Tab("เกาะ",[[9606628205]])
-local Setting_Tab = win:Tab("ตั่งค่า",[[9606644121]])
-local Status_Tab = win:Tab("สเตตัส",[[9613645002]])
+local Shop_Tab = win:Tab("Shop",[[9606625251]])
+local Island_Tab = win:Tab("Island",[[9606628205]])
+local Setting_Tab = win:Tab("Setting",[[9606644121]])
+local Status_Tab = win:Tab("Status",[[9613645002]])
 local Esp_Tab = win:Tab("ESP",[[9606628205]])
 local Hop_Tab = win:Tab("Hop",[[9608089732]])
-General_Tab:Label("ฟาร์มเลเวล")
+General_Tab:Label("Farm Level")
 
 General_Tab:Toggle("ออโต้ฟาร์ม","9606294253",_G.Setting_table.AutoFarm,function(vu)
 	Auto_Farm = vu
@@ -3922,14 +3948,14 @@ MIo = {
 	"Fast",
 	"Smooth"
 }
-General_Tab:Toggle("Fast Attack ","9606294253",_G.Setting_table.FastAttack,function(vu)
-	_G.Setting_table.FastAttack = vu
+General_Tab:Toggle("ตีไว ","9606294253",_G.Setting_table.FastAttack,function(vu)
+	_G.Setting_table.ตีไว = vu
 	Update_Setting(getgenv()['MyName'])
 end)
 spawn(function()
 	while wait(.5) do
 		pcall(function()
-			if _G.Setting_table.FastAttack then
+			if _G.Setting_table.FastAttack ตีไว then
 				repeat wait(_G.Fast_Delay)
 					AttackNoCD()
 				until not _G.Setting_table.FastAttack
@@ -3937,14 +3963,14 @@ spawn(function()
 		end)
 	end
 end)
-General_Tab:Dropdown("FastAttack","Fast",MIo,function(vu)
+General_Tab:Dropdown("FastAttack ตีไว","Fast",MIo,function(vu)
 	_G.Setting_table.FastAttack_Mode = vu
 	Update_Setting(getgenv()['MyName'])
-	if _G.Setting_table.FastAttack_Mode == "Fast" then
+	if _G.Setting_table.FastAttack_Mode == "ตีเร็ว" then
 		_G.Fast_Delay = 0.1
 	elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
 		_G.Fast_Delay = 0.3
-	elseif _G.Setting_table.FastAttack_Mode == "Super Fast" then
+	elseif _G.Setting_table.FastAttack_Mode == "ตีเร็วขั้นสูง" then
 		_G.Fast_Delay = 0
 	end
 end)
@@ -4303,7 +4329,7 @@ General_Tab:Button("Refresh Boss",function(vu)
 	end
 end)
 
-General_Tab:Label("Farm Monster")
+General_Tab:Label("ออโต้ฟาร์มมอนเตอร์Farm Monster")
 General_Tab:Toggle("ออโต้ฟาร์ม","9606294253",_G.Setting_table.Auto_Farm_Monster,function(vu)
 	Auto_Farm_Monster = vu
 	_G.Setting_table.Auto_Farm_Monster = vu
@@ -4399,8 +4425,8 @@ General_Tab:Button("Refresh Monster",function(vu)
 	end
 end)
 
-General_Tab:Label("Farm Mastery")
-General_Tab:Toggle("ออโต้ฟาร์มผลไม้ Fruit","9606294253",_G.Setting_table.Farm_Fruit,function(vu)
+General_Tab:Label("ฟาร์มมาสเตอร์รี่ Mastery")
+General_Tab:Toggle("ออโต้ฟาร์มผลปีศาล Fruit","9606294253",_G.Setting_table.Farm_Fruit,function(vu)
 	Auto_Farm_Fruit = vu
 	_G.Setting_table.Farm_Fruit = vu
 	Update_Setting(getgenv()['MyName'])
@@ -4962,7 +4988,7 @@ spawn(function()
 	end
 end)
 
-General_Tab:Label('Farm Bone')
+General_Tab:Label('ฟาร์ม Bone')
 General_Tab:Toggle("ออโต้ฟาร์ม Bone","9606294253",_G.Setting_table.Farm_Bone,function(vu)
 	Auto_Farm_Bone = vu
 	_G.Setting_table.Farm_Bone = vu
@@ -5030,7 +5056,7 @@ spawn(function()
 	end
 end)
 
-General_Tab:Label('Farm Observation Haki')
+General_Tab:Label('ฟาร์ม Observation Haki')
 General_Tab:Toggle("ออโต้ฟาร์ม Observation Haki","9606294253",_G.Setting_table.Farm_Ken,function(vu)
 	Farm_Ken = vu
 	_G.Setting_table.Farm_Ken = vu
@@ -11581,11 +11607,11 @@ end)
 if _G.Setting_table.BringFruit then
 	BringFruit = true
 end
-Hop_Tab:Toggle("ออโต้ฟาร์มรวมบอส All Boss Hop","9606294253",_G.Setting_table.Auto_Farm_Boss_All_Hop,function(vu)
+Hop_Tab:Toggle("ออโต้ฟาร์มรวมบอสลงดัน All Boss Hop","9606294253",_G.Setting_table.Auto_Farm_Boss_All_Hop,function(vu)
 	_G.Setting_table.Auto_Farm_Boss_All_Hop = vu
 	Update_Setting(getgenv()['MyName'])
 end)
-Hop_Tab:Toggle("ออโต้ฟาร์มบอส Boss Hop","9606294253",_G.Setting_table.Auto_Farm_Boss_Hop,function(vu)
+Hop_Tab:Toggle("ออโต้ฟาร์มลงดัน Boss Hop","9606294253",_G.Setting_table.Auto_Farm_Boss_Hop,function(vu)
 	_G.Setting_table.Auto_Farm_Boss_Hop = vu
 	Update_Setting(getgenv()['MyName'])
 end)
@@ -12129,4 +12155,3 @@ end)
 if _G.Setting_table.Auto_Valkyrie_Helmet then
 	Auto_Valkyrie_Helmet = true
 end
-
