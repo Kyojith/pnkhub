@@ -3669,7 +3669,7 @@ if IKAI then
 end
 
 
-local win = library:Window("PNK",[[Hub]],[[Version : Leak  ]],"9606070311",Enum.KeyCode.RightControl)
+local win = library:Window("PNK",[[Hub]],[[Version : Leak  ]],"9606070311",)
 local General_Tab = win:Tab("General",[[7040391851]])
 local Quest_Tab = win:Tab("    Quest & Item",[[9606626859]])
 local PvP_Tab = win:Tab("ต่อสู้",[[9606626034]])
