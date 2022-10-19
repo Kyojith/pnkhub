@@ -2248,25 +2248,6 @@ if IKAI then
 		SearchStroke.Color = _G.Color
 		SearchStroke.Transparency = 0
 		
-				ToggleImgUi.Name = "ToggleImgUi"
-		ToggleImgUi.Parent = ToggleFrameUi
-		ToggleImgUi.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-		ToggleImgUi.BackgroundTransparency = 1
-		ToggleImgUi.Position = UDim2.new(0.0454545468, 0, 0.125000313, 0)
-		ToggleImgUi.Size = UDim2.new(0, 35, 0, 35)
-		ToggleImgUi.Image = "rbxassetid://9606070311"
-		-- http://www.roblox.com/asset/?id=9605991378
-		Uitoggle.Name = "Uitoggle"
-		Uitoggle.Parent = ToggleFrameUi
-		Uitoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Uitoggle.BackgroundTransparency = 1.000
-		Uitoggle.Position = UDim2.new(0.25757575, 0, 0, 0)
-		Uitoggle.Size = UDim2.new(0, 137, 0, 25)
-		Uitoggle.Font = Enum.Font.GothamSemibold
-		Uitoggle.Text = "Ui Toggle :"
-		Uitoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Uitoggle.TextSize = 12.000
-		
 		UICorner.CornerRadius = UDim.new(0, 4)
 		UICorner.Parent = ToggleFrameUi
 		
