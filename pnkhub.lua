@@ -12129,3 +12129,4 @@ end)
 if _G.Setting_table.Auto_Valkyrie_Helmet then
 	Auto_Valkyrie_Helmet = true
 end
+
