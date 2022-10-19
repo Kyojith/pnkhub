@@ -3688,12 +3688,6 @@ if IKAI then
 	end
 end
 
-game.StarterGui:SetCore("SendNotification", {
-	Title = "PNK Hub", 
-	Text = "PNK Hub ",
-	Icon = "http://www.roblox.com/asset/?id=9610159123",
-	Duration = 8000
-})
 
 local win = library:Window("PNK",[[Hub]],[[Version : Leak  ]],"9606070311",Enum.KeyCode.RightControl)
 local General_Tab = win:Tab("General",[[7040391851]])
