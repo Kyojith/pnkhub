@@ -2115,7 +2115,6 @@ if IKAI then
 		local abc = false
 		local logo = logo or 0
 		local currentpage = ""
-		local keybind = keybind or Enum.KeyCode.RightControl
 		local yoo = string.gsub(tostring(keybind),"Enum.KeyCode.","")
 		
 		local RippleHUBLIB = Instance.new("ScreenGui")
