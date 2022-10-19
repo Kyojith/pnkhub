@@ -3955,7 +3955,7 @@ end)
 spawn(function()
 	while wait(.5) do
 		pcall(function()
-			if _G.Setting_table.FastAttack then
+			if _G.Setting_table.FastAttack ตีไว then
 				repeat wait(_G.Fast_Delay)
 					AttackNoCD()
 				until not _G.Setting_table.FastAttack
@@ -3963,7 +3963,7 @@ spawn(function()
 		end)
 	end
 end)
-General_Tab:Dropdown("FastAttack","Fast",MIo,function(vu)
+General_Tab:Dropdown("FastAttack ตีไว","Fast",MIo,function(vu)
 	_G.Setting_table.FastAttack_Mode = vu
 	Update_Setting(getgenv()['MyName'])
 	if _G.Setting_table.FastAttack_Mode == "ตีเร็ว" then
