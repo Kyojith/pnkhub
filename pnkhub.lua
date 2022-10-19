@@ -2252,8 +2252,6 @@ if IKAI then
 		UICorner.CornerRadius = UDim.new(0, 4)
 		UICorner.Parent = ToggleFrameUi
 		
-
-		
 		Yedhee.Name = "Yedhee"
 		Yedhee.Parent = ToggleFrameUi
 		Yedhee.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
