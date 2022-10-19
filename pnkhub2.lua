@@ -3708,7 +3708,7 @@ local Esp_Tab = win:Tab("ESP",[[9606628205]])
 local Hop_Tab = win:Tab("Hop",[[9608089732]])
 General_Tab:Label("Farm Level")
 
-General_Tab:Toggle("Auto Farm","9606294253",_G.Setting_table.AutoFarm,function(vu)
+General_Tab:Toggle("ออโต้ฟาร์ม","9606294253",_G.Setting_table.AutoFarm,function(vu)
 	Auto_Farm = vu
 	_G.Setting_table.AutoFarm = vu
 	Update_Setting(getgenv()['MyName'])
@@ -4010,8 +4010,8 @@ General_Tab:Button("Refresh Weapon",function(vu)
 	end
 end)
 
-General_Tab:Label("Farm Boss")
-General_Tab:Toggle("Auto Farm","9610159123",_G.Setting_table.Farm_Boss,function(vu)
+General_Tab:Label("ฟาร์มบอส Boss")
+General_Tab:Toggle("ออโต้ฟาร์ม","9610159123",_G.Setting_table.Farm_Boss,function(vu)
 	Auto_Farm_Boss = vu
 	_G.Setting_table.Farm_Boss = vu
 	Update_Setting(getgenv()['MyName'])
@@ -4127,7 +4127,7 @@ spawn(function()
 		end)
 	end
 end)
-General_Tab:Toggle("Auto Farm All Boss","9610159123",_G.Setting_table.Farm_All_Boss,function(vu)
+General_Tab:Toggle("ออโต้ฟาร์มรวมบอส All Boss","9610159123",_G.Setting_table.Farm_All_Boss,function(vu)
 	Auto_Farm_Boss_All = vu
 	_G.Setting_table.Farm_All_Boss = vu
 	Update_Setting(getgenv()['MyName'])
@@ -4329,8 +4329,8 @@ General_Tab:Button("Refresh Boss",function(vu)
 	end
 end)
 
-General_Tab:Label("Farm Monster")
-General_Tab:Toggle("Auto Farm","9606294253",_G.Setting_table.Auto_Farm_Monster,function(vu)
+General_Tab:Label("ออโต้ฟาร์มมอนเตอร์Farm Monster")
+General_Tab:Toggle("ออโต้ฟาร์ม","9606294253",_G.Setting_table.Auto_Farm_Monster,function(vu)
 	Auto_Farm_Monster = vu
 	_G.Setting_table.Auto_Farm_Monster = vu
 	Update_Setting(getgenv()['MyName'])
@@ -4425,8 +4425,8 @@ General_Tab:Button("Refresh Monster",function(vu)
 	end
 end)
 
-General_Tab:Label("Farm Mastery")
-General_Tab:Toggle("Auto Farm Fruit","9606294253",_G.Setting_table.Farm_Fruit,function(vu)
+General_Tab:Label("ฟาร์มมาสเตอร์รี่ Mastery")
+General_Tab:Toggle("ออโต้ฟาร์มผลปีศาล Fruit","9606294253",_G.Setting_table.Farm_Fruit,function(vu)
 	Auto_Farm_Fruit = vu
 	_G.Setting_table.Farm_Fruit = vu
 	Update_Setting(getgenv()['MyName'])
@@ -4646,7 +4646,7 @@ spawn(function()
 		end)
 	end
 end)
-General_Tab:Toggle("Auto Farm Gun","9606294253",_G.Setting_table.Farm_Gun,function(vu)
+General_Tab:Toggle("ออโต้ฟาร์มปืน Gun","9606294253",_G.Setting_table.Farm_Gun,function(vu)
 	Auto_Farm_Gun = vu
 	_G.Setting_table.Farm_Gun = vu
 	Update_Setting(getgenv()['MyName'])
@@ -4833,7 +4833,7 @@ General_Tab:Toggle("Skill V","9606294253",_G.Setting_table.Skill_V,function(vu)
 	_G.Setting_table.Skill_Z = vu
 	Update_Setting(getgenv()['MyName'])
 end)
-General_Tab:Toggle("Auto Farm Melee","9606294253",_G.Setting_table.Farm_Melee,function(vu)
+General_Tab:Toggle("ออโต้ฟาร์มหมัด Melee","9606294253",_G.Setting_table.Farm_Melee,function(vu)
 	Auto_Farm_Melee = vu
 	_G.Setting_table.Farm_Melee = vu
 	Update_Setting(getgenv()['MyName'])
@@ -4910,7 +4910,7 @@ spawn(function()
 		end)
 	end
 end)
-General_Tab:Toggle("Auto Farm Sword","9606294253",_G.Setting_table.Farm_Sword,function(vu)
+General_Tab:Toggle("ออโต้ฟาร์มดาบ Sword","9606294253",_G.Setting_table.Farm_Sword,function(vu)
 	Auto_Farm_Sword = vu
 	_G.Setting_table.Farm_Sword = vu
 	Update_Setting(getgenv()['MyName'])
@@ -4988,8 +4988,8 @@ spawn(function()
 	end
 end)
 
-General_Tab:Label('Farm Bone')
-General_Tab:Toggle("Auto Farm Bone","9606294253",_G.Setting_table.Farm_Bone,function(vu)
+General_Tab:Label('ฟาร์ม Bone')
+General_Tab:Toggle("ออโต้ฟาร์ม Bone","9606294253",_G.Setting_table.Farm_Bone,function(vu)
 	Auto_Farm_Bone = vu
 	_G.Setting_table.Farm_Bone = vu
 	Update_Setting(getgenv()['MyName'])
@@ -5056,8 +5056,8 @@ spawn(function()
 	end
 end)
 
-General_Tab:Label('Farm Observation Haki')
-General_Tab:Toggle("Auto Farm Observation Haki","9606294253",_G.Setting_table.Farm_Ken,function(vu)
+General_Tab:Label('ฟาร์ม Observation Haki')
+General_Tab:Toggle("ออโต้ฟาร์ม Observation Haki","9606294253",_G.Setting_table.Farm_Ken,function(vu)
 	Farm_Ken = vu
 	_G.Setting_table.Farm_Ken = vu
 	Update_Setting(getgenv()['MyName'])
@@ -9786,7 +9786,7 @@ PvP_Tab:Label("Bounty")
 			game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun].RemoteFunctionShoot:InvokeServer(game:GetService("Players"):FindFirstChild(SelectedKillPlayer).Character.HumanoidRootPart.Position, (require(game.ReplicatedStorage.Util).Other.hrpFromPart(v17)));
 		end
 	end)
-PvP_Tab:Toggle("Auto Farm Bounty","9606294253",_G.Setting_table.Auto_Farm_Bounty,function(vu)
+PvP_Tab:Toggle("ออโต้ฟาร์มเงิน Bounty","9606294253",_G.Setting_table.Auto_Farm_Bounty,function(vu)
 	Auto_Farm_Bounty = vu
 	_G.Setting_table.Auto_Farm_Bounty = vu
 	Update_Setting(getgenv()['MyName'])
@@ -11607,11 +11607,11 @@ end)
 if _G.Setting_table.BringFruit then
 	BringFruit = true
 end
-Hop_Tab:Toggle("Auto Farm All Boss Hop","9606294253",_G.Setting_table.Auto_Farm_Boss_All_Hop,function(vu)
+Hop_Tab:Toggle("ออโต้ฟาร์มรวมบอสลงดัน All Boss Hop","9606294253",_G.Setting_table.Auto_Farm_Boss_All_Hop,function(vu)
 	_G.Setting_table.Auto_Farm_Boss_All_Hop = vu
 	Update_Setting(getgenv()['MyName'])
 end)
-Hop_Tab:Toggle("Auto Farm Boss Hop","9606294253",_G.Setting_table.Auto_Farm_Boss_Hop,function(vu)
+Hop_Tab:Toggle("ออโต้ฟาร์มลงดัน Boss Hop","9606294253",_G.Setting_table.Auto_Farm_Boss_Hop,function(vu)
 	_G.Setting_table.Auto_Farm_Boss_Hop = vu
 	Update_Setting(getgenv()['MyName'])
 end)
@@ -11681,7 +11681,7 @@ Hop_Tab:Button("Refresh Select Boss",function()
 		S_B_5:Add(v)
 	end
 end)
-Hop_Tab:Toggle("Auto Farm Observation Haki Hop","9606294253",_G.Setting_table.Farm_Ken_Hop,function(vu)
+Hop_Tab:Toggle("ออโต้ฟาร์ม Observation Haki Hop","9606294253",_G.Setting_table.Farm_Ken_Hop,function(vu)
 	_G.Setting_table.Farm_Ken_Hop = vu
 	Update_Setting(getgenv()['MyName'])
 end)
@@ -11738,7 +11738,7 @@ spawn(function()
 	end
 end)
 
-Hop_Tab:Toggle("Auto Farm Elite Hunter Hop","9606294253",_G.Setting_table.Auto_Elite_Hunter_Hop,function(vu)
+Hop_Tab:Toggle("ออโต้ฟาร์ม Elite Hunter Hop","9606294253",_G.Setting_table.Auto_Elite_Hunter_Hop,function(vu)
 	Auto_Elite_Hunter = vu
 	_G.Setting_table.Auto_Elite_Hunter_Hop = vu
 	Update_Setting(getgenv()['MyName'])
